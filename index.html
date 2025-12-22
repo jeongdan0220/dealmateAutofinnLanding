@@ -27,7 +27,6 @@
 
     <!-- JS -->
     <script src="jquery-3.6.0.min.js"></script>
-    <script src="front-ui.js"></script>
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -37,10 +36,15 @@
 <!-- start :: wrap -->
 <div id="wrap">
     <!-- start :: header -->
-    <header id="header">
-        <h1 class="logo">
-            <a href="/"></a>
-        </h1>
+    <header id="header" class="dm_header">
+        <div class="hd_inner">
+            <h1 class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="108" height="40" fill="none" viewBox="0 0 108 40"><g fill="#fff" clip-path="url(#a)"><path d="m59.116 7.74-6.53 21.026h5.417l6.53-21.025zM81.215 9.608c-.89-1.202-2.268-1.867-3.902-1.867h-4.535c-3.654 0-7.668 3.357-8.95 7.484l-1.779 5.745c-.705 2.275-.48 4.43.617 5.929.89 1.202 2.276 1.867 3.902 1.867h4.543c3.646 0 7.66-3.358 8.942-7.484l1.787-5.745c.705-2.276.48-4.43-.625-5.93m-6.29 5.617-1.787 5.745c-.376 1.217-1.258 2.251-2.291 2.251h-.898c-.376 0-.673-.136-.865-.4-.264-.361-.312-.922-.12-1.539l1.787-5.745c.376-1.218 1.258-2.251 2.291-2.251h.898c.368 0 .665.136.857.4.272.36.32.922.128 1.539M92.833 7.74h-7.011l-6.53 21.026h7.01zM101.463 28.766l1.73-5.545h-6.53l.681-2.195h6.522l1.731-5.545h-6.53l.681-2.195h6.53l1.723-5.545H94.46l-6.538 21.025zM85.75 35.76h19.133l1.723-5.552H87.472zM50.984 7.74l-1.723 5.546h1.94l-4.808 15.48h5.016l6.53-21.025z"/><path d="M49.806 7.74H34.462l-6.53 21.026h17.283l4.455-14.35h-1.939zM40.36 23.222h-3.694l3.085-9.935h3.685zM21.234 28.766l-.449 1.442h5.48l-1.722 5.553H12.172l3.894-12.54h5.48l.449-1.45h-5.48l4.358-14.03 1.09-3.502h7.019l-1.09 3.502-2.636 8.485h5.352l-3.894 12.54zM14.543 23.221H8.734l3.085-9.935h5.809L19.35 7.74H6.53L0 28.766h12.82z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 4.24h108v31.52H0z"/></clipPath></defs></svg>
+            </h1>    
+            <div class="hd_right">
+                <a href="#" class="btn_login">로그인</a>
+            </div>
+        </div>
     </header>
     <!-- end :: header -->
 
@@ -48,15 +52,26 @@
     <!-- start :: container -->
     <div id="container">
         <div class="section_visual">
-            <div class="visual_text">
-                <div class="title">
-                    <span></span>
-                    <h2></h2>
-                    <p></p>
-                </div>
-                <a class="btn_" href=""></a>
+            <div class="visual_orbit">
+                <div class="visual_orbit_glow"></div>
+                <div class="visual_orbit_line"></div>
+                <div class="visual_orbit_tail"></div>
+                <div class="visual_orbit_dot"></div>
             </div>
-            <div class="visual_object"></div>
+            
+            <div class="visual_inner">
+                <div class="visual_text">
+                    <span class="badge">국내 주요 금융사 비교</span>
+                    <h2>차별화된 오토금융 조건,<br>딜메이트와 함께하세요</h2>
+                    <p>금리와 인센티브, 수수료 조건을 투명하게 비교하고<br>합리적인 조건으로 계약을 진행해 보세요.</p>
+                    <div class="visual_btn">
+                        <a href="#" class="btn_primary">무료로 시작하기</a>
+                    </div>
+                </div>
+                <div class="visual_object">
+                    <img src="images/visual-dashboard.jpg" alt="">
+                </div>
+            </div>
         </div>
 
         
@@ -76,6 +91,7 @@
 </div>
 <!-- end :: wrap -->
 
-<script src="js/front-ui.js"></script>
+
+<script src="front-ui.js"></script>
 </body>
 </html>
