@@ -1,6 +1,13 @@
 $(function () {
-    headerEvent();    
+    headerEvent();
+    motionChecker();
+    faqAccordion();
 });
+$(window).scroll(function () {
+    motionChecker();
+});
+window.onload = function() {
+}
 
 /* ======================================
  * header event
@@ -23,6 +30,37 @@ function headerEvent() {
     }
     toggleHeaderClass();
     $(window).on('scroll', toggleHeaderClass);
+}
+
+/* ======================================
+ * motion checker
+ * ====================================== */
+function motionChecker() {
+    var scrollTopRatio;
+    function getScrollTop() {
+        if (document.scrollingElement && document.scrollingElement.scrollHeight) {
+            scrollTopRatio = $(document).height() / document.scrollingElement.scrollHeight;
+        } else {
+            scrollTopRatio = 1;
+        }
+        return $(window).scrollTop() * scrollTopRatio;
+    }
+
+    $('.motion').each(function (index) {
+        var pos = $(this).offset(),
+            wY  = getScrollTop(),
+            wH  = $(window).height(),
+            oH  = $(this).outerHeight();
+        var posTop = pos.top;
+        if (posTop >= wY && oH + posTop <= wY + wH) {
+            $(this).addClass('on');
+        } else if ((posTop <= wY && posTop + oH > wY) || (posTop >= wY && posTop <= wY + wH)) {
+            $(this).addClass('on');
+        } else {
+            //영역에서 벗어났을때 on클래스 제거
+            $(this).removeClass('on');
+        }
+    });
 }
 
 
@@ -112,3 +150,34 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     io.observe(section);
 });
+
+/* ======================================
+ * FAQ Accordion
+ * ====================================== */
+function faqAccordion() {
+	var accoItem = $('.faq_list > ul > li');
+    accoItem.addClass('hidden');
+    accoItem.find('.faq_body').hide();
+
+    if(accoItem.hasClass('active') === true){
+        $('.faq_list > ul > li.active').removeClass('hidden').find('.faq_body').show();
+    }
+
+	$('.faq_list > ul > li > .faq_head').click(function(){
+		var onAccoItem = $(this).parents('.faq_list > ul > li:first');
+		if(onAccoItem.hasClass('hidden') === true){
+			accoItem.addClass('hidden').removeClass('active');
+			accoItem.find('.faq_body').hide(0);
+			onAccoItem.removeClass('hidden').addClass('active');
+			onAccoItem.find('.faq_body').show();
+
+            var _thisOffset = onAccoItem.offset();
+            $('html').animate({ scrollTop: _thisOffset.top - 115 },400);
+		}
+        else {
+			onAccoItem.removeClass('active').addClass('hidden');
+			onAccoItem.find('.faq_body').hide();
+		}
+		return false;
+	});
+}
