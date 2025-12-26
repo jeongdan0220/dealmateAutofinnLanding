@@ -7,6 +7,7 @@ $(window).scroll(function () {
     motionChecker();
 });
 window.onload = function() {
+    $('body').addClass('loadok');
 }
 
 /* ======================================
@@ -58,7 +59,7 @@ function motionChecker() {
             $(this).addClass('on');
         } else {
             //영역에서 벗어났을때 on클래스 제거
-            $(this).removeClass('on');
+            // $(this).removeClass('on');
         }
     });
 }
