@@ -250,9 +250,10 @@ button, input, select, textarea{font-family: 'SUITE Variable', 'Pretendard', -ap
 
 /* faq_list */
 .faq_list>ul{display:flex;flex-direction:column;gap:24px}
-.faq_list .faq_item{display:flex;flex-direction:column;gap:24px;background:#F8F9FA;padding:40px 32px;border-radius:16px}
-.faq_item .faq_head{display:flex;justify-content:space-between;gap: 16px; cursor:pointer}
+.faq_list .faq_item{display:flex;flex-direction:column;background:#F8F9FA;border-radius:16px;padding:16px 0}
+.faq_item .faq_head{display:flex;justify-content:space-between;gap:16px;cursor:pointer;padding:24px 32px}
 .faq_item .faq_head>p{font-size:19px;font-weight:700}
+.faq_item .faq_body{padding:0 32px 24px}
 .faq_item .faq_body>p{line-height:1.60}
 .faq_item .faq_head::after{display:block;content:'';width:24px;height:24px;transition:transform 0.3s ease;background-repeat:no-repeat;background-position:center;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 9.5L12 14.5L17 9.5' stroke='%23151719' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")}
 .faq_item.active .faq_head::after{transform:rotate(180deg)}
