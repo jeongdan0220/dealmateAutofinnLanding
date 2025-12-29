@@ -170,14 +170,14 @@ function faqAccordion() {
 			accoItem.addClass('hidden').removeClass('active');
 			accoItem.find('.faq_body').hide(0);
 			onAccoItem.removeClass('hidden').addClass('active');
-			onAccoItem.find('.faq_body').show();
+			onAccoItem.find('.faq_body').slideDown(150);
 
-            var _thisOffset = onAccoItem.offset();
-            $('html').animate({ scrollTop: _thisOffset.top - 115 },400);
+            // var _thisOffset = onAccoItem.offset();
+            // $('html').animate({ scrollTop: _thisOffset.top - 115 },400);
 		}
         else {
 			onAccoItem.removeClass('active').addClass('hidden');
-			onAccoItem.find('.faq_body').hide();
+			onAccoItem.find('.faq_body').slideUp(100);
 		}
 		return false;
 	});
