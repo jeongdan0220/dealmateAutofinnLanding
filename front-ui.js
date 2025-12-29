@@ -168,7 +168,7 @@ function faqAccordion() {
 		var onAccoItem = $(this).parents('.faq_list > ul > li:first');
 		if(onAccoItem.hasClass('hidden') === true){
 			accoItem.addClass('hidden').removeClass('active');
-			accoItem.find('.faq_body').hide(0);
+			accoItem.find('.faq_body').slideUp(150);
 			onAccoItem.removeClass('hidden').addClass('active');
 			onAccoItem.find('.faq_body').slideDown(150);
 
@@ -177,7 +177,7 @@ function faqAccordion() {
 		}
         else {
 			onAccoItem.removeClass('active').addClass('hidden');
-			onAccoItem.find('.faq_body').slideUp(100);
+			onAccoItem.find('.faq_body').slideUp(150);
 		}
 		return false;
 	});
