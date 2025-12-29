@@ -31,7 +31,7 @@ a:focus{outline:none !important}
 button{cursor: pointer}
 button img{vertical-align:middle}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
-img, video{border:0;vertical-align:top}
+img, video{border:0;vertical-align:top;pointer-events:none}
 table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed}
 input, select{vertical-align:middle}
 label{cursor:pointer}
@@ -343,8 +343,10 @@ button, input, select, textarea{font-family: 'SUITE Variable', 'Pretendard', -ap
 
     /* faq_list */
     .section_faq{padding:60px 0 40px}
-    .faq_list .faq_item{padding:24px 28px}
+    .faq_list .faq_item{padding: 4px 0;}
+    .faq_item .faq_head{padding: 20px 28px;}
     .faq_item .faq_head>p{font-size:17px;font-weight:600}
+    .faq_item .faq_body{padding: 0 28px 20px;}
     .faq_item .faq_body>p{font-size:15px}
 
     /* section_cta */
@@ -402,9 +404,10 @@ button, input, select, textarea{font-family: 'SUITE Variable', 'Pretendard', -ap
     .care_hero .care_hero_item .txt>p{font-size:14px}
 
     /* faq_list */
+    .faq_item .faq_head{padding: 20px 24px;}
     .faq_list>ul{gap:20px}
-    .faq_list .faq_item{padding:24px}
     .faq_item .faq_head>p{font-size:16px}
+    .faq_item .faq_body{padding: 0 24px 20px;}
     .faq_item .faq_body>p{font-size:14px}
 
     /* cta_banner */
@@ -464,9 +467,11 @@ button, input, select, textarea{font-family: 'SUITE Variable', 'Pretendard', -ap
     .care_hero .care_hero_item .txt>p{font-size:13px}
     .care_hero .care_hero_item .img>img{width:80px}
 
-    /* faq_list */
-    .faq_list .faq_item{padding:20px}
+     /* faq_list */
+    .faq_list .faq_item{padding: 4px 0;}
+    .faq_item .faq_head{padding: 16px 20px;}
     .faq_item .faq_head>p{font-size:15px}
+    .faq_item .faq_body{padding: 0 20px 16px;}
     .faq_item .faq_body>p{font-size:13px}
 
     /* cta_banner */
