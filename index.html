@@ -203,9 +203,9 @@
     <footer id="footer">
         <div class="ft_inner">
             <div class="ft_policy">
-                <a href="" class="btn_privacyTerms">개인정보처리방침</a>
-                <a href="" class="btn_privacyTerms">금융소비자보호 내부통제기준</a>
-                <a href="" class="btn_privacyTerms">대출성 금융상품판매대리·중개업 등록증</a>
+                <a href="#lp_privacyTerms" class="btn_privacyTerms" rel="modal:open">개인정보처리방침</a>
+                <a href="#lp_financialProtection" class="btn_privacyTerms" rel="modal:open">금융소비자보호 내부통제기준</a>
+                <a href="#lp_loanBrokerage" class="btn_privacyTerms" rel="modal:open">대출성 금융상품판매대리·중개업 등록증</a>
             </div>
             <div class="ft_info">
                 <div class="ft_row">
@@ -226,6 +226,27 @@
     <!-- end :: footer -->
 </div>
 <!-- end :: wrap -->
+
+<div id="lp_privacyTerms" class="modal lp_policy">
+    <div class="modal_head"><h2>개인정보처리방침</h2></div>
+    <div class="modal_cont" data-lenis-prevent>
+        <? include "policy/privacy.html"; ?>
+    </div>
+</div>
+
+<div id="lp_financialProtection" class="modal lp_policy">
+    <div class="modal_head"><h2>금융소비자보호 내부통제기준</h2></div>
+    <div class="modal_cont" data-lenis-prevent>
+        <? include "policy/financialProtection.html"; ?>
+    </div>
+</div>
+
+<div id="lp_loanBrokerage" class="modal lp_policy">
+    <div class="modal_head"><h2>대출성 금융상품판매대리·중개업 등록증</h2></div>
+    <div class="modal_cont" data-lenis-prevent>
+        <? include "policy/loanBrokerage.html"; ?>
+    </div>
+</div>
 
 <script src="front-ui.js"></script>
 </body>
